@@ -1,0 +1,20 @@
+@media (max-width: 574px) {
+    .custom-profile {
+      max-width: 100%;
+      margin-left:0;
+      padding-left:  100px;
+      padding-right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .profile-main{
+        //  padding-left: 85px;
+        // margin-left: 90px;
+        max-width: 100%;
+        margin: 0;
+        gap: 0;
+        font-size: 1px;
+    }
+}

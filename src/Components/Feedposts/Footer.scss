@@ -1,0 +1,121 @@
+.form-control::placeholder { 
+    color: grey;
+    opacity: 1; 
+}
+.custom-modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+  }
+  
+  .custom-modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 55rem;;
+    background-color: black;
+    color: white;
+    border: solid 2px grey;
+  
+    @media (min-width: 500px) {
+      flex-direction: row;
+    }
+    @media (max-width: 500px) {
+     font-size: medium;
+      width:300px;
+      position: fixed;
+      right: 20px;
+      
+      
+    }
+  }
+  
+  .custom-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-right: solid 2px grey;
+  
+    @media (max-width: 991.98px) {
+      border-right: none;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  
+  .custom-details-container {
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 23rem;
+  }
+  
+  .custom-user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .custom-delete-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .custom-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  
+  .custom-divider {
+    border-bottom: 1px solid grey;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-content {
+    margin-bottom: 1rem;
+  }
+  
+  .custom-comment {
+    margin-bottom: 0.5rem;
+  }
+  
+  .custom-details-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 8px rgb(17, 16, 16);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color:#161515;
+    -webkit-box-shadow: inset 0 0 8px rgba(21, 20, 20, 0.7);
+  }

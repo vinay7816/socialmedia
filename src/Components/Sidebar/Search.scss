@@ -1,0 +1,105 @@
+.search-container {
+  position: relative;
+}
+
+.sbi {
+  cursor: pointer;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.search-container .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+.modal {
+  background-color: white;
+  border: 1px solid gray;
+  max-width: 400px;
+  animation: slideInLeft 0.3s ease-out;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures content within modal does not overflow */
+}
+
+.modal-content {
+  padding: 20px;
+}
+.searchbtn{
+  border-radius:0.5rem;
+  border:none;
+  color: white;
+  background-color: rgb(26, 24, 24);
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover{
+      background-color: rgb(30, 28, 28);
+      color: white;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.pop-up-button {
+  
+  background-color: rgb(35, 34, 34);
+  border: solid 2px rgb(39, 37, 37);
+   border-radius: 0.5rem;
+  animation: pop-up 0.2s ease-in-out;
+}
+
+@keyframes pop-up {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 580px) {
+.modal-dialog{
+  display: flex;
+  position: absolute;
+  right: 10px;
+}
+}
+  

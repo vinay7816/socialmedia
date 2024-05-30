@@ -1,0 +1,17 @@
+@media (max-width: 576px) {
+    .custom-home {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      padding-right: 0;
+      display: flex;
+      align-items: center;
+    }
+    .home-box{
+        padding-left: 60px;
+        max-width: 100%;
+        margin: 0;
+        gap: 0;
+        
+    }
+}

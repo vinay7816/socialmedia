@@ -1,0 +1,142 @@
+@keyframes popup {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.modal-dialog {
+  background-color: #424242;
+  color: white;
+  border: solid 1.5px white;
+  width: 70%;
+  max-width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: popup 0.3s ease-out; /* Applying the popup animation */
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.modal-body {
+  .modal-body-content {
+    display: flex;
+    flex-direction: column;
+
+    .form-group {
+      margin-bottom: 1rem;
+      
+      .avatar-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .profile-img {
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          border: solid 1.5px white;
+          margin-bottom: 0.5rem;
+        }
+
+        .edit-pic-btn {
+          background-color: white;
+          color: black;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 0.875rem;
+
+          &:hover {
+            background-color: #2e65e3;
+            color: #ccc;
+          }
+        }
+
+        .hidden-create {
+          display: none;
+        }
+      }
+
+      .label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .input {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  .close-btn {
+    background-color: #F44336;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+  }
+
+  .save-btn {
+    background-color: #3196F3;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+}

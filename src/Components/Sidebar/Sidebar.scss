@@ -5,6 +5,15 @@
     object-fit: cover;
     width: 100%;
 }
+@media(max-width:800px){
+    .main-sidebar{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
+.main-sidebar{
+
+}
 loggout:hover{
     width:150vw;
 }

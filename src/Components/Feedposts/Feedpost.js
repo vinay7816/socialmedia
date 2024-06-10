@@ -15,22 +15,23 @@ const Feedpost = () => {
   return (
     
    <>
-   <div>
+   
       
       {postsArray.map((post) => (
-        <>
+        <div  className="feedpost my-3 py-0 mx-1" >
+
         <Feedheader post={post}/>
-        <div className='col  col-auto my-0' >
+        <div className='col   col-auto my-0' >
         <img className=" rounded img-fluid" style={{}} src={post.imageURL}  alt=".."  />
         </div>
 						 <Feedfooter post={post}/>
-             </>
+             </div>
 					))}
       
       
       
      
-      </div>
+     
       </>
   );
 }

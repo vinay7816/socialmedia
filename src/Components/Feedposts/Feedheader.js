@@ -19,16 +19,16 @@ const Feedheader = ({ post }) => {
 
   return (
     <div className='d-flex justify-content-between mt-2 align-items-center my-1'>
-      <div className='d-flex align-items-center'>
+      <div className='d-flex align-items-center '>
         <img
           src={userProfile.profilePicURL || avatar} 
           className="my-1 rounded-circle shadow-4 align-self-start"
-          style={{ height: "4vh", width: "4vh" }}
+          style={{ height: "5vh", width: "5vh" }}
           alt="Avatar"
         />
-        <span>
-          <span className='text mx-1'>{userProfile.username}</span>
-          <span className='text6' style={{ color: "grey" }}>.{timeAgo(post.createdAt)}</span>
+        <span className='user-details'>
+          <span className='text mx-1 '>{userProfile.username}</span>
+          <span className='text6 mx-1' style={{ color: "grey" }}>.{timeAgo(post.createdAt)}</span>
         </span>
       </div>
       <div>

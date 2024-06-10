@@ -23,7 +23,7 @@ const Sidebar = () => {
 
   return (
     <>
-         <div className="col-lg-3 col-xl-2 col-auto d-flex flex-column position-fixed vh-100" style={{ backgroundColor: "black", zIndex: "1",borderRight:"solid 1px white" }}>
+         <div className="col-lg-3 col-xl-2 col-auto d-flex flex-column  main-sidebar position-fixed vh-100 " style={{ backgroundColor: "black", zIndex: "1",borderRight:"solid 1px white" }}>
 
           
             <div className='mt-2'  >

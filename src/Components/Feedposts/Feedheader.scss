@@ -16,3 +16,12 @@
     border-radius: 5px;
     padding: 3px;
 }
+@media(max-width:800px){
+    .user-details{
+          display: flex !important;
+          flex-direction: column !important;
+          align-items:start;
+          justify-content: center;
+          padding: 3px !important;
+    }
+}

@@ -40,7 +40,7 @@ const CommentsModal = ({ open, onClose, posts }) => {
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2 className="text-center">Comments</h2>
-          <button className="modal-close" onClick={onClose}>
+          <button className="modal-close" style={{color:"white"}}onClick={onClose}>
             &times;
           </button>
         </div>

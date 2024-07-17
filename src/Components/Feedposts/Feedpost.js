@@ -18,11 +18,11 @@ const Feedpost = () => {
    
       
       {postsArray.map((post) => (
-        <div  className="feedpost my-3 py-0 mx-1" >
+        <div  className="feedpost my-3 py-0 px-2" style={{  border:" solid 2px #1b1b1b",borderRadius:"1rem"}} >
 
         <Feedheader post={post}/>
-        <div className='col   col-auto my-0' >
-        <img className=" rounded img-fluid" style={{}} src={post.imageURL}  alt=".."  />
+        <div className=' my-0' >
+        <img className="  img-fluid px-0 mx-0" style={{ borderRadius:"1rem"}} src={post.imageURL}  alt=".."  />
         </div>
 						 <Feedfooter post={post}/>
              </div>

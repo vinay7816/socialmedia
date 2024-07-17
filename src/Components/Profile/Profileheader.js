@@ -56,7 +56,7 @@ const Profileheader = () => {
             <h6 className='text1 mx-1 fs-sm-7 fs-auto fs-md-4'>As a programmer</h6>
           </div>
           <div>
-            <h6 className='text1 mx-1 fs-sm-12 fs-auto fs-md-4'>Truth is meant to be spoken</h6>
+            <h6 className='text1 mx-1 fs-sm-12 fs-auto fs-md-4'>{userProfile.bio}</h6>
           </div>
         </div>
       </div>

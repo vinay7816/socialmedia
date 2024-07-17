@@ -90,7 +90,7 @@ const handleSearchuser=(e)=>{
              
               <div className="modal-footer ">
                       
-                <button type="submit text-white" isLoading={isLoading} className=" pop-up-button ">
+                <button type="submit text-white" isLoading={isLoading} style={{color:"white"}} className=" pop-up-button ">
                   Search
                 </button>
               </div>
@@ -101,7 +101,7 @@ const handleSearchuser=(e)=>{
                <button type="button" className="close-btn align-self-end my-2 bg-black text-white"  onClick={handlesearch}>
                &times;
              </button>
-             <Link to={`/${info.username}`} style={{textDecoration:"none"}}>
+             <Link to={`/${info.username}`} style={{textDecoration:"none",color:"white"}}>
                <Suggesteduser users={info} name={info.username} followers={info.followers.length} following={info.following.length} avatar={info.profilePicURL}/>
                </Link>
                </div>

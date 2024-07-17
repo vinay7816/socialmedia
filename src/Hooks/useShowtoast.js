@@ -1,28 +1,29 @@
 import { useState } from 'react';
 
-const useShowToast = () => {
-  const [toastVisible, setToastVisible] = useState(false);
+const useShowtoast = () => {
+  const [toast, setToast] = useState({
+    visible: false,
+    title: '',
+    description: '',
+    status: ''
+  });
+
   const showToast = (title, description, status) => {
-    console.log(title, description, status)
-    setToastVisible(true);
+    console.log(title, description, status);
+    setToast({
+      visible: true,
+      title,
+      description,
+      status
+    });
 
-    return (
-      {toastVisible} &&  // Directly render if toastVisible is true
-      <div className={`toast`} role="alert" aria-live="assertive" aria-atomic="true">
-        <div className="toast-header">
-          <strong className="me-auto">{title}</strong>
-          <button type="button" className="btn-close" onClick={() => setToastVisible(false)} aria-label="Close"></button>
-        </div>
-        <div className="toast-body">
-          {description}
-        </div>
-      </div>
-    )
-  
+    // Automatically hide the toast after a certain time
+    setTimeout(() => {
+      setToast({ ...toast, visible: false });
+    }, 3000); // Hide after 3 seconds
+  };
+
+  return { toast, showToast };
 };
 
-
-  return { showToast};
-};
-
-export default useShowToast;
+export default useShowtoast;

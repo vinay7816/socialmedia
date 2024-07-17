@@ -16,7 +16,7 @@ const EditProfile = ({ open, onClose }) => {
   const details = useSelector(state => state.user);
 const{handleImagechange,selectedFile,setSelectedFile}=usePreviewImg();
 const{isUpdating,editProfile}=useEditprofile();
-const showToast=useShowtoast();
+const { toast, showToast } = useShowtoast();
   const handleEditProfile = async(e) => {
      e.preventDefault();
     try{
@@ -25,7 +25,7 @@ const showToast=useShowtoast();
       onClose();
     }
     catch(error){
-      showToast("error",error.message,"error");
+      showToast("Error", error.message, "error");
     }
     
   };
@@ -35,9 +35,20 @@ const showToast=useShowtoast();
   if (!open) return null;
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-dialog" onClick={e => e.stopPropagation()}>
-        <div className="modal-content">
+    <div className="modal-overlay   "  onClick={onClose}>
+      {toast.visible && (
+        <div className={`toast ${toast.status}`} role="alert" aria-live="assertive" aria-atomic="true">
+          <div className="toast-header">
+            <strong className="me-auto">{toast.title}</strong>
+            <button type="button" className="btn-close" onClick={() => showToast('', '', '')} aria-label="Close"></button>
+          </div>
+          <div className="toast-body">
+            {toast.description}
+          </div>
+        </div>
+      )}
+      <div className="modal-dialog1" onClick={e => e.stopPropagation()}>
+        <div className="modal-content" style={{overflowY:"hidden"}}>
           <div className="modal-header">
             <h1 className="modal-title">Edit Profile</h1>
             <button type="button" className="close-btn" onClick={onClose}>
@@ -48,7 +59,7 @@ const showToast=useShowtoast();
             <div className="modal-body">
               <div className="modal-body-content">
                 <div className="form-group">
-                  <div className="avatar-section">
+                  <div className="avatar-section d-flex justify-content-around">
                     <img src={selectedFile||details.profilePicURL} alt="Avatar" className="profile-img" />
                     <label className="edit-pic-btn" htmlFor="inputGroupFile01">
                       Edit Profile Picture

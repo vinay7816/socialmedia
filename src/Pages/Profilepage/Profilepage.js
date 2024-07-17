@@ -21,16 +21,16 @@ const Profilepage = () => {
     <>
     
 			
-    <div className='d-flex w-100 flex-column custom-profile justify-content-center align-items-center'>
+    <div className='d-flex w-100 flex-column  justify-content-center align-items-center'>
     {!user&&<Navbar/>}
     <div className=' d-flex flex-column profile-main w-100 justify-content-center align-items-center' >
         <div className='py-5 px-4 w-100  d-flex align-self-center justify-content-center'>
         {!isLoading && userProfile && <Profileheader />}
         </div>
-        <div className='d-flex flex-column w-75  px-4 mx-5 ' style={{borderTop:"solid 1px grey"}}>
+        <div className='d-flex flex-column custom-profile w-75  px-4 mx-5 ' style={{borderTop:"solid 1px grey"}}>
           <Profiletabs/>
           </div>
-          <div className='w-75 d-lg-flex d-sm-block'>
+          <div className='w-75 '>
           <Profileposts/>
         </div>
     </div>

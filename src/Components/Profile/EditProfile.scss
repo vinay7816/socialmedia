@@ -10,9 +10,7 @@
 }
 
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+ 
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -22,11 +20,14 @@
   z-index: 1050;
 }
 
-.modal-dialog {
+.modal-dialog1 {
+  position: absolute;
+  top: 30px;
+  left: 50;
   background-color: #424242;
   color: white;
   border: solid 1.5px white;
-  width: 70%;
+  width: 75%;
   max-width: 400px;
   border-radius: 8px;
   overflow: hidden;
@@ -61,7 +62,7 @@
     display: flex;
     flex-direction: column;
 
-    .form-group {
+    .form-group{
       margin-bottom: 1rem;
       
       .avatar-section {
@@ -70,9 +71,9 @@
         align-items: center;
         margin-bottom: 1rem;
 
-        .profile-img {
-          height: 100px;
-          width: 100px;
+        .profile-img{
+          height: 80px;
+          width: 80px;
           border-radius: 50%;
           border: solid 1.5px white;
           margin-bottom: 0.5rem;
@@ -85,7 +86,8 @@
           border: none;
           border-radius: 8px;
           cursor: pointer;
-          font-size: 0.875rem;
+          font-size: 0.65rem;
+          font-weight: 600;
 
           &:hover {
             background-color: #2e65e3;
@@ -138,5 +140,13 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 580px) {
+  .modal-dialog1 {
+      display: flex;
+      position: absolute;
+      right: 22px !important;
+      top: 30px !important;
   }
 }

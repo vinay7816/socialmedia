@@ -14,8 +14,8 @@ const Profileposts = () => {
   
 	if (noPostsFound) return ;
   return (
-    <div className='w-100 d-flex  my-1 row' >
-      <div className='col col-lg-10 col-xl-10 col-md-10 col-sm-12 d-xl-flex d-md-flex d-lg-flex d-sm-flex d-xs-block  ' style={{columnGap:"10px"}}>
+    <div className='w-100   my-1 ' >
+      <div className=' d-xl-flex d-md-flex d-lg-flex d-sm-flex d-xs-block  ' style={{columnGap:"10px",display:"flex", flexWrap:"wrap"}} >
      {!isLoading && (
 				<>
 				

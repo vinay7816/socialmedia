@@ -3,6 +3,7 @@ import Suggestedheader from './Suggestedheader'
 import Suggesteduser from './Suggesteduser'
 import useGetSuggestedUser from '../../Hooks/useGetSuggestedUser'
 
+
 const Suggestedusers = () => {
   const{isLoading,SuggestedUsers}=useGetSuggestedUser();
   return (
@@ -19,7 +20,7 @@ const Suggestedusers = () => {
       {SuggestedUsers.map((users)=>(
        
               <Suggesteduser users={users} name={users.username} followers={users.followers.length} avatar={users.profilePicURL}/>
-
+             
       ))}
       
     </div>

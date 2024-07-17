@@ -102,13 +102,13 @@ const Profilepost = ({ post }) => {
 
   return (
     <>
-      <div className="col col-sm-6 col-md-6 col-lg-5 col-xl-4 mb-3">
-        <div className="card" onClick={handleOpen}>
+      <div className="mb-3">
+        <div className="card card-custom" onClick={handleOpen} style={{ border:" solid 2px #1b1b1b",borderRadius:"1rem",backgroundColor:"none"}}>
           <img
-            className="card-img-top img-fluid"
+            className="card-img-top card-img-custom img-fluid"
             src={post.imageURL}
             alt="post"
-            style={{ objectFit: 'fill', height: '15rem' }}
+            style={{ objectFit: 'fill', height: '10rem',width:"10rem", border:" solid 2px #1b1b1b",borderRadius:"1rem" }}
           />
         </div>
       </div>

@@ -19,12 +19,12 @@
     
    
   }
-  .feedpost{
-    box-shadow: 1px 1px 4px  #1b1b1b;
-  }
+
   @media(max-width:800px){
     .feedpost{
         display: block;
-        margin: 2.5rem;
+        margin: 0rem !important;
+       
+        
     }
   }

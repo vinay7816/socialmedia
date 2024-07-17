@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom'
 import useFollowUser from '../../Hooks/usefollowUser';
 const Suggesteduser = ({users,name,followers,avatar,following}) => {
   const details=useSelector((state)=>state.user);
   const { isFollowing, isUpdating, handleFollowUser } = useFollowUser(users.uid);
     const[Followed,Notfollowed]=useState(false);
   return (
+    <>
+    
     <div className='d-flex justify-content-between align-items-center w-100 my-1 '>
+    <Link to={`/${users.username}`} style={{textDecoration:"none",color:"white"}}>
         <div className='d-flex align-items-center '>
         <img
           src={avatar}
@@ -19,12 +23,15 @@ const Suggesteduser = ({users,name,followers,avatar,following}) => {
            <span className=' mx-1' style={{fontSize:"12px", color:"grey"}}>{followers} followers</span>
         </div>
       </div>
+      </Link>
+     
       <div >
         <span className='text unflw' role='button' style={{fontSize:"16px",fontWeight:"400"}} 
         onClick={handleFollowUser}
         isLoading={isUpdating}>{isFollowing?"UnFollow":"follow"}</span>
       </div>
     </div>
+    </>
   )
 }
 

@@ -92,6 +92,7 @@ const Feedfooter = ({ post }) => {
                 color: "white",
                 border: "none",
                 borderBottom: "solid 1px grey",
+                borderRadius:"0"
               }}
             />
             <button
@@ -105,6 +106,7 @@ const Feedfooter = ({ post }) => {
                 color: "white",
                 border: "none",
                 borderBottom: "solid 1px grey",
+                borderRadius:"0"
               }}
               disabled={isCommenting}
             >

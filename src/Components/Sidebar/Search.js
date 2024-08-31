@@ -59,8 +59,8 @@ const handleSearchuser=(e)=>{
     
   }
   return (
-    <div className="modal-overlay  " onClick={onClose}>
-    <div className="modal-dialog bg-black my-3" onClick={e => e.stopPropagation()}>
+    <div className="modal-overlay1  " onClick={onClose}>
+    <div className="modal-dialog  my-3" onClick={e => e.stopPropagation()}>
       <div className="modal-content">
         <div className="modal-header">
           <h1 className="modal-title">Search user</h1>

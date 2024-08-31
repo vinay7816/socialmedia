@@ -70,7 +70,7 @@ const Profilepost = ({ post }) => {
   const [open, setOpen] = useState(false);
   const authUser = useSelector((state) => state.information);
   const dispatch = useDispatch();
-  const showToast = useShowtoast();
+  const {toast,showToast} = useShowtoast();
 
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
@@ -92,7 +92,7 @@ const Profilepost = ({ post }) => {
       });
 
       dispatch(deletePost(post.id));
-      showToast('Success', 'Post deleted successfully', 'success');
+      showToast('Success', 'Post deleted successfully', 200);
     } catch (error) {
       showToast('Error', error.message, 'error');
     } finally {
@@ -103,6 +103,13 @@ const Profilepost = ({ post }) => {
   return (
     <>
       <div className="mb-3">
+      {toast.visible && (
+        <div>
+          <h4>{toast.title}</h4>
+          <p>{toast.description}</p>
+          <span>{toast.status}</span>
+        </div>
+      )}
         <div className="card card-custom" onClick={handleOpen} style={{ border:" solid 2px #1b1b1b",borderRadius:"1rem",backgroundColor:"none"}}>
           <img
             className="card-img-top card-img-custom img-fluid"

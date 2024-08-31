@@ -17,13 +17,13 @@ const useShowtoast = () => {
       status
     });
 
-    // Automatically hide the toast after a certain time
     setTimeout(() => {
-      setToast({ ...toast, visible: false });
-    }, 3000); // Hide after 3 seconds
+      setToast(prevToast => ({ ...prevToast, visible: false }));
+    }, 3000); 
   };
 
   return { toast, showToast };
 };
 
 export default useShowtoast;
+

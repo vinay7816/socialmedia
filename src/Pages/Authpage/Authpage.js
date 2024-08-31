@@ -11,7 +11,7 @@ const Authpage = () => {
             <img src={auth} alt=".." className='	' style={{height:"26rem"}}/>
 
             </div>
-            <div className='right col col-xl-4 col-lg-4 col-md-8 col-sm-12 text-center ' style={{}}>
+            <div className='right col col-xl-4 col-lg-4 col-md-8 col-sm-12 text-center ' style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
               
                   <Authform/>
 
